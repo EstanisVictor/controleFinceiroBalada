@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/nomeLabelTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="140dp"
+        android:layout_width="332dp"
+        android:layout_height="wrap_content"
+        android:text="Nome"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/nomeTxt"
+        app:layout_constraintTop_toBottomOf="@id/nomeLabelTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="332dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:hint="Informe o produto"
+        android:inputType="text"
+        android:background="@drawable/edit_text_border"
+        />
+
+    <TextView
+        android:id="@+id/valorLabelTxt"
+        app:layout_constraintTop_toBottomOf="@+id/nomeTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_width="332dp"
+        android:layout_height="wrap_content"
+        android:text="Valor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/valorTxt"
+        app:layout_constraintTop_toBottomOf="@id/valorLabelTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="332dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:hint="Informe o valor do produto"
+        android:inputType="numberDecimal"
+        android:background="@drawable/edit_text_border"
+        />
+
+    <TextView
+        android:id="@+id/dataLabelTxt"
+        app:layout_constraintTop_toBottomOf="@+id/valorTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_width="332dp"
+        android:layout_height="wrap_content"
+        android:text="Data"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/dataTxt"
+        app:layout_constraintTop_toBottomOf="@id/dataLabelTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="332dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:hint="Informe a data"
+        android:inputType="date"
+        android:background="@drawable/edit_text_border"
+        />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/dataTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        >
+
+        <RadioButton
+            android:id="@+id/radioEntrada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Entrada"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="6dp"
+            />
+
+        <RadioButton
+            android:id="@+id/radioSaida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saída"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="6dp"
+            />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/cadastroBtn"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/resumoBtn"
+        android:layout_width="156dp"
+        android:layout_height="wrap_content"
+        android:text="Cadastro"
+        android:textAllCaps="true"
+        android:textSize="19sp"
+        app:cornerRadius="0dp"
+        android:layout_marginTop="32dp"/>
+
+    <Button
+        android:id="@+id/resumoBtn"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup"
+        app:layout_constraintStart_toEndOf="@id/cadastroBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="156dp"
+        android:layout_height="wrap_content"
+        android:text="Resumo"
+        android:textAllCaps="true"
+        android:textSize="19sp"
+        app:cornerRadius="0dp"
+        android:layout_marginTop="32dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
